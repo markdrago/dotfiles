@@ -8,6 +8,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 ""bundles in use
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'Python-Syntax'
 colorscheme solarized
 let g:solarized_termcolors=256
 "post-vundle
