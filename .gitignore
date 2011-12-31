@@ -1,6 +1,4 @@
 *
 !.gitignore
 !.vimrc
-!.vim/colors/blackboard.vim
-!.vim/syntax/python.vim
 !.zshrc
