@@ -1,0 +1,4 @@
+To use:
+
+clone to ~/.dotfiles
+run ./make_links.sh to make symlinks from ~ to ~/.dotfiles
