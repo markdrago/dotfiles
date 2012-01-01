@@ -20,7 +20,6 @@ set number          "line numbers
 set background=dark "use lighter colored fonts
 set title           "put info in terminal title
 set showcmd         "bits of useful info in bot/right corner
-set mouse=a         "allow use of mouse in all modes
 
 ""searching
 set incsearch       "incremental search
