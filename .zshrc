@@ -27,4 +27,4 @@ for newpath in $newpaths; do
         PATH="$PATH:$newpath"
     fi
 done
-export $PATH
+export PATH
