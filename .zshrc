@@ -36,3 +36,11 @@ source $ZSH/oh-my-zsh.sh
 EDITOR=vim
 VISUAL=$EDITOR
 GIT_EDITOR=$EDITOR
+
+#add directories to PATH if the directories exist
+newpaths="$HOME/Packages/javancss/bin"
+for newpath in $newpaths; do
+    if [ -d $newpath ]; then
+        export PATH="$PATH:$newpath"
+    fi
+done
