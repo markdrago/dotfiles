@@ -24,6 +24,7 @@ GIT_EDITOR=$EDITOR
 newpaths="$HOME/Packages/javancss/bin"
 for newpath in $newpaths; do
     if [ -d $newpath ]; then
-        export PATH="$PATH:$newpath"
+        PATH="$PATH:$newpath"
     fi
 done
+export $PATH
