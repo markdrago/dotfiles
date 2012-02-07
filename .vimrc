@@ -21,6 +21,15 @@ set background=dark "use lighter colored fonts
 set title           "put info in terminal title
 set showcmd         "bits of useful info in bot/right corner
 
+""keys
+"disable arrow keys to force use of hjkl
+noremap <Up> <nop>
+noremap <Down> <nop>
+noremap <Left> <nop>
+noremap <Right> <nop>
+"remap ctrl+space to act like esc
+inoremap <C-Space> <Esc>
+
 ""searching
 set incsearch       "incremental search
 set ignorecase      "ignore case when searching
