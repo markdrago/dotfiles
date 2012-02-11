@@ -16,6 +16,10 @@ EDITOR=vim
 VISUAL=$EDITOR
 GIT_EDITOR=$EDITOR
 
+# Aliases
+alias gs=gst
+alias gd='g diff'
+
 # Add directories to PATH if the directories exist
 newpaths="$HOME/Packages/javancss/bin"
 for newpath in $newpaths; do
