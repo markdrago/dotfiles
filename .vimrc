@@ -9,6 +9,7 @@ Bundle 'gmarik/vundle'
 ""bundles in use
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'Python-Syntax'
+Bundle 'git://git.wincent.com/command-t.git'
 colorscheme solarized
 let g:solarized_termcolors=256
 "post-vundle
