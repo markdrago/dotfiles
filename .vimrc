@@ -21,6 +21,16 @@ set number          "line numbers
 set background=dark "use lighter colored fonts
 set title           "put info in terminal title
 set showcmd         "bits of useful info in bot/right corner
+set showmode        "indicates input or replace mode at bottom
+set cursorline      "highlight current line
+set ruler           "show line & column number of cursor
+set history=1000    "remember history of : commands
+"set undofile        "remember undo history across vim restarts
+set autoread        "reload a file if it is changed outside of vim
+set complete=.,w,b,u,t,i "places to scan when doing completion
+
+""typing
+set backspace=indent,eol,start "backspace always works
 
 ""keys
 "disable arrow keys to force use of hjkl
@@ -35,6 +45,10 @@ inoremap <C-Space> <Esc>
 set incsearch       "incremental search
 set ignorecase      "ignore case when searching
 set smartcase       "match case if pattern contains A-Z
+set hlsearch        "highlight results of a previous search
+
+""command-t
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/build/*,*/.settings/*,*/bin/*,*/testResults/*
 
 ""whitespace
 set tabstop=4       "4-space tabs
@@ -45,6 +59,9 @@ set autoindent      "keep indentation level from previous line
 ""syntax highlighting
 syntax on
 let python_highlight_all=1
+let java_highlight_all=1
+let java_highlight_functions="style"  "highlight based on case of functions
+let java_allow_cpp_keywords=1         "do not highlight c++ keywords
 
 ""files
 set encoding=utf-8
