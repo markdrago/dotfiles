@@ -11,6 +11,7 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'Python-Syntax'
 Bundle 'git://github.com/scrooloose/nerdtree.git'
 Bundle 'git://git.wincent.com/command-t.git'
+Bundle 'git://github.com/kien/ctrlp.vim.git'
 colorscheme solarized
 let g:solarized_termcolors=256
 "post-vundle
@@ -48,8 +49,20 @@ set ignorecase      "ignore case when searching
 set smartcase       "match case if pattern contains A-Z
 set hlsearch        "highlight results of a previous search
 
-""command-t
+""ctrl-p
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/build/*,*/.settings/*,*/bin/*,*/testResults/*
+let g:ctrlp_max_files = 0                      "do not limit # of files to scan
+let g:ctrlp_cache_dir = $HOME.'/.cache/ctrlp'  "directory to store cache files
+let g:ctrlp_map = '<c-p>'                      "map to ctrl+p in normal mode
+let g:ctrlp_working_path_mode = 2              "search from nearest parent with a .hg/.git directory
+let g:ctrlp_user_command = {
+    \ 'types': {
+      \ 1: ['.git/', 'cd %s && git ls-files'],
+      \ 2: ['.hg/', 'hg --cwd %s locate -I .'],
+      \ },
+    \ 'fallback': 'find %s -type f'
+    \ }                                        "use git/hg commands to get file list when possible
+let g:ctrlp_lazy_update = 1                    "only update after typing has stopped for 250ms
 
 ""whitespace
 set tabstop=4       "4-space tabs
