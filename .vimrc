@@ -31,6 +31,11 @@ set history=1000    "remember history of : commands
 set autoread        "reload a file if it is changed outside of vim
 set complete=.,w,b,u,t,i "places to scan when doing completion
 
+""gui-specific interface settings
+if has('gui_running')
+  set guifont=Inconsolata\ Medium\ 10
+endif
+
 ""typing
 set backspace=indent,eol,start "backspace always works
 
@@ -40,8 +45,6 @@ noremap <Up> <nop>
 noremap <Down> <nop>
 noremap <Left> <nop>
 noremap <Right> <nop>
-"remap ctrl+space to act like esc
-inoremap <C-Space> <Esc>
 
 ""searching
 set incsearch       "incremental search
@@ -69,6 +72,9 @@ set tabstop=4       "4-space tabs
 set shiftwidth=4    "4-space tabs
 set expandtab       "indent with spaces
 set autoindent      "keep indentation level from previous line
+
+""ctags et al
+set tags=~/.tags    "location of ctags file
 
 ""syntax highlighting
 syntax on
