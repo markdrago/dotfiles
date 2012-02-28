@@ -40,6 +40,8 @@ endif
 set backspace=indent,eol,start "backspace always works
 
 ""keys
+"use jk to exit insert mode 
+inoremap jk <Esc>
 "disable arrow keys to force use of hjkl
 noremap <Up> <nop>
 noremap <Down> <nop>
