@@ -9,6 +9,7 @@ Bundle 'gmarik/vundle'
 ""bundles in use
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'Python-Syntax'
+Bundle 'git://github.com/derekwyatt/vim-scala.git'
 Bundle 'git://github.com/scrooloose/nerdtree.git'
 Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'git://github.com/kien/ctrlp.vim.git'
