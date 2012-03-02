@@ -50,10 +50,19 @@ noremap <Up> <nop>
 noremap <Down> <nop>
 noremap <Left> <nop>
 noremap <Right> <nop>
+noremap <Home> <nop>
+noremap <End> <nop>
 inoremap <Up> <nop>
 inoremap <Down> <nop>
 inoremap <Left> <nop>
 inoremap <Right> <nop>
+inoremap <Home> <nop>
+inoremap <End> <nop>
+"navigate via display lines, not physical lines
+noremap j gj
+noremap k gk
+noremap ^ g^
+noremap $ g$
 
 ""searching
 set incsearch       "incremental search
