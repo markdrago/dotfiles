@@ -37,14 +37,17 @@ set complete=.,w,b,u,t,i "places to scan when doing completion
 ""gui-specific interface settings
 if has('gui_running')
   set guifont=Inconsolata\ Medium\ 10
+  set guioptions-=tT        "disable toolbar and tear-off menus
+  set lines=40 columns=105  "set default size for gui mode
 endif
 
 ""typing
 set backspace=indent,eol,start "backspace always works
 
 ""keys
-"use jk to exit insert mode 
+"use jk to exit insert mode and visual mode
 inoremap jk <Esc>
+vnoremap jk <Esc> 
 "disable arrow keys to force use of hjkl
 noremap <Up> <nop>
 noremap <Down> <nop>
