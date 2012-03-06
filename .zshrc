@@ -19,12 +19,22 @@ GIT_EDITOR=$EDITOR
 # Aliases
 alias gs=gst
 alias gd='g diff'
+alias rake='noglob rake' #do not let globbing break rake commands
 
 # Add directories to PATH if the directories exist
-newpaths="$HOME/Packages/javancss/bin"
+newpaths="$HOME/Packages/javancss/bin
+$HOME/.rvm/bin"
 for newpath in $newpaths; do
     if [ -d $newpath ]; then
         PATH="$PATH:$newpath"
     fi
 done
 export PATH
+
+# Source files if they exist
+source_files="$HOME/.rvm/scripts/rvm"
+for source_file in $source_files; do
+    if [ -e $source_file ]; then
+        source $source_file
+    fi
+done
