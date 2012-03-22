@@ -27,7 +27,7 @@ set background=dark "use lighter colored fonts
 set title           "put info in terminal title
 set showcmd         "bits of useful info in bot/right corner
 set showmode        "indicates input or replace mode at bottom
-set cursorline      "highlight current line
+"set cursorline      "highlight current line
 set ruler           "show line & column number of cursor
 set history=1000    "remember history of : commands
 "set undofile        "remember undo history across vim restarts
@@ -47,7 +47,6 @@ set backspace=indent,eol,start "backspace always works
 ""keys
 "use jk to exit insert mode and visual mode
 inoremap jk <Esc>
-vnoremap jk <Esc> 
 "disable arrow keys to force use of hjkl
 noremap <Up> <nop>
 noremap <Down> <nop>
@@ -55,12 +54,6 @@ noremap <Left> <nop>
 noremap <Right> <nop>
 noremap <Home> <nop>
 noremap <End> <nop>
-inoremap <Up> <nop>
-inoremap <Down> <nop>
-inoremap <Left> <nop>
-inoremap <Right> <nop>
-inoremap <Home> <nop>
-inoremap <End> <nop>
 "navigate via display lines, not physical lines
 noremap j gj
 noremap k gk
@@ -107,4 +100,7 @@ let java_allow_cpp_keywords=1         "do not highlight c++ keywords
 ""files
 set encoding=utf-8
 set wildignore=*.swp,*.pyc,*.class
+
+""source .vimrc when it is saved
+au! BufWritePost .vimrc source %
 
