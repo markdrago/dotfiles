@@ -21,6 +21,7 @@ alias gs=gst
 alias gd='g diff'
 alias rake='noglob rake' #do not let globbing break rake commands
 alias mkbr='hg branches -a | grep "^mk"'
+alias hgpn='hg push --new-branch'
 
 # Add directories to PATH if the directories exist
 newpaths="$HOME/Packages/javancss/bin
