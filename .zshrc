@@ -23,7 +23,8 @@ alias rake='noglob rake' #do not let globbing break rake commands
 alias mkbr='hg branches -a | grep "^mk"'
 alias mkbl='hg branchlifetimes -b "^mk"'
 alias mkms='hg mergesizes -b "^mk"'
-alias mkdb='wt && hgl && echo; echo "Active Branches"; mkbl && echo; echo "Recent Merges"; mkms'
+alias mkcr='crstats -o -u upadhye -u tma -u mdrago -u mturkel -u shusong'
+alias mkdb='wt && hgl && echo; echo "Active Branches"; mkbl && echo; echo "Recent Merges"; mkms && echo; echo "Code Reviews"; mkcr'
 alias hgpn='hg push --new-branch'
 alias hglu='hg pull && hg update '
 
