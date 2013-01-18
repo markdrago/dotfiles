@@ -2,8 +2,7 @@
 ZSH=$HOME/.oh-my-zsh
 
 # Name of oh-my-zsh theme to load
-ZSH_THEME="cloud"
-ZSH_THEME_CLOUD_PREFIX='♥'
+ZSH_THEME="norm"
 
 # List of oh-my-zsh plugins to load
 plugins=(git mercurial)
