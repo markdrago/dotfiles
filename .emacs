@@ -5,4 +5,4 @@
 (set-face-attribute 'default nil :height 90)
 
 ;switch theme
-(load-theme 'tango-dark)
+(load-theme 'wombat)
