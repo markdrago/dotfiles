@@ -48,3 +48,6 @@ for source_file in "${(f)source_files}"; do
         source $source_file
     fi
 done
+
+# Make CapsLock be a Control
+setxkbmap -option ctrl:nocaps
