@@ -19,13 +19,23 @@ GIT_EDITOR=$EDITOR
 alias gs=gst
 alias gd='g diff'
 alias rake='noglob rake' #do not let globbing break rake commands
+
 alias mkbr='hg branches -a | grep "^mk"'
 alias mkbl='hg branchlifetimes -b "^mk"'
 alias mkms='hg mergesizes -b "^mk" -l 5'
 alias mkcr='crstats -o -u upadhye -u tma -u mdrago -u mturkel -u shusong'
-alias mkdb='wt && hgl && echo; echo "Active Branches"; mkbl && echo; echo "Recent Merges"; mkms && echo; echo "Code Reviews"; mkcr'
+alias mkdb='wt && hgl && echo; echo "Meddlers"; echo "Active Branches"; mkbl && echo; echo "Recent Merges"; mkms && echo; echo "Code Reviews"; mkcr'
+
+alias psbr='hg branches -a | egrep "^tps"'
+alias psbl='hg branchlifetimes -b "^tps"'
+alias psms='hg mergesizes -b "^tps" -l 5'
+alias pscr='crstats -o -u njunankar -u dhiggins -u hghazzi'
+alias psdb='wt && hgl && echo; echo "Stingrays"; echo "Active Branches"; psbl && echo; echo "Recent Merges"; psms && echo; echo "Code Reviews"; pscr'
+
 alias hgpn='hg push --new-branch'
 alias hglu='hg pull && hg update '
+
+alias fix_dev_hosts='sudo cp /etc/hosts.d/custom /etc/hosts && hostfile_switch -d nyc-dev | grep -vi localhost | sudo tee -a /etc/hosts'
 
 # Add directories to PATH if the directories exist
 newpaths="$HOME/Packages/javancss/bin
