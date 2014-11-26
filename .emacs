@@ -6,3 +6,9 @@
 
 ;switch theme
 (load-theme 'wombat)
+
+;load haskell mode
+(add-to-list 'load-path "/usr/share/emacs/site-list/haskell-mode/")
+(load "haskell-mode-autoloads.el")
+(add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
+

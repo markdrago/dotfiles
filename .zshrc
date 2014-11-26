@@ -18,6 +18,7 @@ GIT_EDITOR=$EDITOR
 # Aliases
 alias gs=gst
 alias gd='g diff'
+alias gpnb='git push --set-upstream origin $(current_branch)'
 alias rake='noglob rake' #do not let globbing break rake commands
 
 alias mkbr='hg branches -a | grep "^mk"'
@@ -34,12 +35,15 @@ alias psdb='wt && hgl && echo; echo "Stingrays"; echo "Active Branches"; psbl &&
 
 alias hgpn='hg push --new-branch'
 alias hglu='hg pull && hg update '
+alias hgld='hg pull && hg update default'
 
 alias fix_dev_hosts='sudo cp /etc/hosts.d/custom /etc/hosts && hostfile_switch -d nyc-dev | grep -vi localhost | sudo tee -a /etc/hosts'
 
 # Add directories to PATH if the directories exist
-newpaths="$HOME/Packages/javancss/bin
+newpaths="$HOME/bin
+$HOME/Packages/javancss/bin
 $HOME/.rvm/bin
+$HOME/.gem/ruby/2.0.0/bin
 /workspace/env
 /workspace/bin
 /workspace/tools"
@@ -52,7 +56,8 @@ export PATH
 
 # Source files if they exist
 source_files="$HOME/.rvm/scripts/rvm
-$HOME/.yodle-dev-shell-utils/conf/sh/all"
+$HOME/.yodle-dev-shell-utils/conf/sh/all
+/etc/profile.d/vte.sh"
 for source_file in "${(f)source_files}"; do
     if [[ -e $source_file ]]; then
         source $source_file

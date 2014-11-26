@@ -60,6 +60,12 @@ noremap k gk
 noremap ^ g^
 noremap $ g$
 
+"easy navigation of tabs
+nnoremap tj :tabfirst<CR>
+nnoremap tl :tabnext<CR>
+nnoremap th :tabprev<CR>
+nnoremap tk :tablast<CR>
+
 ""searching
 set incsearch       "incremental search
 set ignorecase      "ignore case when searching
