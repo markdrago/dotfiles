@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="norm"
 
 # List of oh-my-zsh plugins to load
-plugins=(git mercurial)
+plugins=(git mercurial archlinux)
 
 # Load oh-my-zsh
 source $ZSH/oh-my-zsh.sh
